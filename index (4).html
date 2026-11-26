@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Mini Phone OS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="phone">
+    <div class="screen" id="screen">
+
+      <!-- Строка состояния (потянуть вниз — открыть шторку) -->
+      <div class="status-bar" id="status-bar">
+        <span id="status-time">12:00</span>
+        <span class="status-icons">
+          <svg width="18" height="12" viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1" fill="currentColor"/><rect x="5" y="5" width="3" height="7" rx="1" fill="currentColor"/><rect x="10" y="2" width="3" height="10" rx="1" fill="currentColor"/><rect x="15" y="0" width="3" height="12" rx="1" fill="currentColor" opacity="0.4"/></svg>
+          <svg width="26" height="12" viewBox="0 0 26 12"><rect x="0.5" y="0.5" width="21" height="11" rx="3" fill="none" stroke="currentColor" opacity="0.6"/><rect x="2.5" y="2.5" width="17" height="7" rx="1.5" fill="currentColor"/><rect x="23" y="4" width="2" height="4" rx="1" fill="currentColor" opacity="0.6"/></svg>
+        </span>
+      </div>
+
+      <!-- Шторка уведомлений -->
+      <div class="shade" id="shade">
+        <div class="quick">
+          <button class="toggle" id="tg-dark">Тёмная тема</button>
+          <button class="toggle" id="tg-sound">Звук</button>
+        </div>
+        <div class="notif-title">Уведомления</div>
+        <div id="notif-list"></div>
+        <button class="clear-btn" id="clear-notif">Очистить</button>
+      </div>
+
+      <!-- Экран блокировки -->
+      <div class="lock-screen" id="lock-screen">
+        <div class="lock-time" id="lock-time">12:00</div>
+        <div class="lock-date" id="lock-date"></div>
+        <button class="unlock-btn" id="unlock-btn">Провести вверх, чтобы открыть</button>
+      </div>
+
+      <!-- Домашний экран -->
+      <div class="home" id="home">
+        <div class="app-grid" id="app-grid"></div>
+        <div class="dock" id="dock"></div>
+      </div>
+
+      <!-- Приложение на весь экран -->
+      <div class="app-view" id="app-view">
+        <div class="app-header">
+          <button class="back-btn" id="back-btn">‹</button>
+          <span id="app-title"></span>
+        </div>
+        <div class="app-content" id="app-content"></div>
+      </div>
+
+      <div class="home-indicator" id="home-indicator"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
